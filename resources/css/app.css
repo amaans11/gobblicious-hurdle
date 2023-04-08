@@ -1,0 +1,101 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+[x-cloak] {
+    display: none !important;
+}
+
+:root {
+    --primary-color: #4e2754;
+    --secondary-color: #fee13b;
+}
+
+.btn {
+    @apply inline-flex items-center justify-center inline-block px-6 py-3 text-base text-xl font-bold text-center no-underline rounded-lg;
+}
+
+.btn:disabled {
+    @apply opacity-75;
+}
+
+.text--primary {
+    color: var(--primary-color);
+}
+
+.bg--primary {
+    background-color: var(--primary-color);
+}
+
+.bg--secondary {
+    background-color: var(--secondary-color);
+}
+
+.border--primary {
+    border: 1px solid var(--primary-color);
+}
+
+.btn--primary {
+    background-color: var(--primary-color);
+}
+
+
+.min-h-body {
+    min-height: calc(100vh - 72px);
+}
+
+.btn-checkbox+* {
+    background-color: rgba(255, 240, 157, 0.25);
+    color: var(--primary-color);
+}
+
+.btn-checkbox:checked+* {
+    background-color: var(--secondary-color);
+}
+
+.bg-grey {
+    background-color: rgba(58, 81, 82, 0.05);
+    border: rgba(58, 81, 82, 0.05);
+}
+
+.lined-text:before {
+    content: "";
+    display: block;
+    width: 120px;
+    height: 1px;
+    background: var(--primary-color);
+    left: -5px;
+    top: 50%;
+    position: absolute;
+}
+
+.lined-text:after {
+    content: "";
+    display: block;
+    width: 120px;
+    height: 1px;
+    background: var(--primary-color);
+    right: -5px;
+    top: 50%;
+    position: absolute;
+}
+
+.eye-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.selected-all {
+    background-color: rgba(255, 240, 157, 0.25);
+    color: var(--primary-color);
+}
+
+/* .bg-image {
+    height: calc(100vh - 240px);
+} */
